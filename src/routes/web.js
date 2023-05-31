@@ -1,8 +1,12 @@
-const express = require("express");
+import express from "express";
+
 const router = express.Router();
-const { getHomePage } = require("../controllers/homeController");
 
-// define the home page route
-router.get("/", getHomePage);
+router.get("/", (req, res) => res.send("SERVER ON!!"));
+// router.get("/detail/:id", getDetailPage);
+// router.post("/submit_user", submitUser);
+// router.post("/deleteUser/:id", deleteUser);
+// router.get("/editUser/:id", editUser);
+// router.post("/updateUser/:id", updateUser);
 
-module.exports = router;
+export default router;

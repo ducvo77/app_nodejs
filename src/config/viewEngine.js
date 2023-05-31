@@ -1,6 +1,6 @@
-const express = require("express");
-const { engine } = require("express-handlebars");
-const path = require("path");
+import express from "express";
+import { engine } from "express-handlebars";
+import path from "path";
 
 const configViewEngine = (app) => {
   //config template engine

@@ -1,0 +1,10 @@
+GET http://localhost:8000/api/v1/user
+
+###
+POST http://localhost:8000/api/v1/register
+Content-Type: application/json 
+
+{
+    "email":"congssd2ua22ctdsp@gmail.com",
+    "password": "12345623"
+}
