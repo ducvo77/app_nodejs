@@ -5,6 +5,7 @@ import configViewEngine from "./config/viewEngine";
 import webRoutes from "./routes/web";
 import apiRoutes from "./routes/api";
 import "./config/connectDB";
+import { notFound } from "./middlewares/handleErrors";
 
 const app = express(); // app express
 
@@ -30,6 +31,7 @@ configViewEngine(app);
 //Route
 app.use("/", webRoutes);
 app.use("/", apiRoutes);
+app.use(notFound);
 
 app.listen(port, hostname, () => {
   console.log(`Server is running on the port ${port}`);

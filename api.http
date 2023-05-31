@@ -5,6 +5,16 @@ POST http://localhost:8000/api/v1/register
 Content-Type: application/json 
 
 {
-    "email":"congssd2ua22ctdsp@gmail.com",
+    "email":"consduscstsssssssp11@gmail.com",
+    "password": "12s3s45623"
+}
+
+###
+POST http://localhost:8000/api/v1/login
+Content-Type: application/json 
+
+{
+    "email":"conductp11@gmail.com",
     "password": "12345623"
 }
+
