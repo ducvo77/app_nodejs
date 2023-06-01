@@ -1,7 +1,6 @@
 import db from "../models";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import { internalServerError } from "../middlewares/handleErrors";
 
 const hashPassword = (password) =>
   bcrypt.hashSync(password, bcrypt.genSaltSync(8));

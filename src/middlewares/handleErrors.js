@@ -1,7 +1,7 @@
 import createHttpError from "http-errors";
 
-export const badRequests = (req, res) => {
-  const err = new createHttpError.BadRequest();
+export const badRequests = (error, res) => {
+  const err = new createHttpError.BadRequest(error);
   return res.status(err.status).json({
     err: -1,
     message: err.message,
