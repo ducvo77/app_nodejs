@@ -6,10 +6,7 @@ import webRoutes from "./routes/web";
 import apiRoutes from "./routes/api";
 import "./config/connectDB";
 import { notFound } from "./middlewares/handleErrors";
-
 const app = express(); // app express
-
-// checkDb();
 
 //Config cors access
 app.use(
@@ -31,8 +28,8 @@ configViewEngine(app);
 //Route
 app.use("/", webRoutes);
 app.use("/", apiRoutes);
-app.use(notFound);
+app.use((req, res) => notFound(res));
 
 app.listen(port, hostname, () => {
-  console.log(`Server is running on the port ${port}`);
+  console.log(`Server is running on the http://localhost:${port}`);
 });

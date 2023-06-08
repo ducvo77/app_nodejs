@@ -8,16 +8,25 @@ export const badRequests = (error, res) => {
   });
 };
 
-export const notFound = (req, res) => {
+export const notFound = (res) => {
   const err = new createHttpError.NotFound();
+  // return res.status(err.status).json({
+  //   err: -1,
+  //   message: err.message,
+  // });
+  return res.send("NOT FOUND!!");
+};
+
+export const internalServerError = (res) => {
+  const err = new createHttpError.InternalServerError();
   return res.status(err.status).json({
     err: -1,
     message: err.message,
   });
 };
 
-export const internalServerError = (req, res) => {
-  const err = new createHttpError.InternalServerError();
+export const notAuth = (error, res) => {
+  const err = new createHttpError.Unauthorized(error);
   return res.status(err.status).json({
     err: -1,
     message: err.message,

@@ -1,13 +1,31 @@
-<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>NodeJS Project</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="root">
+      <header>
+        <div class="topnav">
+          <div>
+            <a class="active" href="/">Home</a>
+            <a href="#">News</a>
+            <a href="#">Contact</a>
+            <a href="#">About</a>
+          </div>
+          <button type="button" class="btn btn-success"><a href="/login">Đăng
+              nhập</a></button>
+        </div>
+      </header>
+      <div class="warpper">
+        {{{body}}}
+      </div>
+    </div>
 
-    {{{body}}}
-
-</body>
+  </body>
 </html>
