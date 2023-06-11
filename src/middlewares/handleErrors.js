@@ -9,12 +9,11 @@ export const badRequests = (error, res) => {
 };
 
 export const notFound = (res) => {
-  const err = new createHttpError.NotFound();
-  // return res.status(err.status).json({
-  //   err: -1,
-  //   message: err.message,
-  // });
-  return res.send("NOT FOUND!!");
+  const err = new createHttpError.NotFound("Route not found!!!");
+  return res.status(err.status).json({
+    err: -1,
+    message: err.message,
+  });
 };
 
 export const internalServerError = (res) => {
